@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zero的个人空间</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+          border: 1px solid black;
+        } */
+      .yinying {
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgb(64, 71, 86) 0px 0px 0px 1px inset;
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(83, 83, 83);
+        font-size: 14px;
+        color: #666;
+      }
+      /* 当屏幕宽度小于600px时要改变的css */
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shujuqu {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .neirong::-webkit-scrollbar {
+        display: none;
+      }
+      <style >
+     @keyframes rotate {
+        0%{
+            transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+        }
+        100%{
+            transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+        }
+    }
+    .stars{
+        transform: perspective(500px);
+        transform-style: preserve-3d;
+        position: absolute;
+        perspective-origin: 50% 100%;
+        left:50%;
+        animation: rotate 90s infinite linear ;
+        bottom: 0;
+    }
+    .star{
+        width: 2px;
+        height: 2px;
+        background: #f7f7b8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+    }
+    html,
+    body{
+        background: radial-gradient(200% 100% at bottom center,#f7f7b6,#e96f92,#1b2947);
+        background: radial-gradient(220% 105% at top center,#1b2947 10%,#75517d 40%,#e96f92 65%,#f7f7b6);
+        background-attachment: fixed;
+        overflow: hidden;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+   </head>
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="baise yinying">
+      <!-- 引入不蒜子计数 -->
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <center>
+        浏览量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>👀 | 访客数：<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>👦
+      </center>
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid: #999;
+        "
+        class="flex"
+      >
+        <img src="1.jpg" width="40px" height="40px" alt="" />
+        <div style="margin-left: 10px">zero</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <ul id="list">
+          <li>
+              <a href="#">日语</a>
+              <ul id="u1">
+                  <li><a href="https://verbhandbook.ninjal.ac.jp/headwords/" target="_blank">日语动词</a></li>
+                  <li><a href="https://yoji-jukugo.com/" target="_blank">日语四字熟语</a></li>
+                  <li><a href="https://www.kanjipedia.jp/" target="_blank">日语词典</a></li>
+                  <li><a href="https://nihongo-arekore.com/" target="_blank">日本語あれこれ</a></li>
+                  <li><a href="https://www2.ninjal.ac.jp/Onomatope/50_on.html" target="_blank">拟声拟态</a></li>
+                  <li><a href="https://nihonsi-jiten.com/" target="_blank">日本史事典</a></li>
+                  <li><a href="https://niwasaburoo.amebaownd.com/" target="_blank">日语语法</a></li>
+                  <li><a href="https://jpnculture.net/" target="_blank">日本文化</a></li>
+                  <li><a href="https://keirinkan-online.jp/" target="_blank">日语品词</a></li>
+                  <li><a href="https://test.mojidict.com/?f=p1">mojiTEST</a></li>
+                  <li><a href="https://kaisetu.org/category/game/">ゲーム用語</a></li>
+                  <li><a href="https://gimon-sukkiri.jp/tag/netyogo/">ネット用語</a></li>
+                  <li><a href="https://vvlexicon.ninjal.ac.jp/db/">复合动词</a></li>
+                  <li><a href="https://kotowaza-dictionary.jp/">日语用典</a></li>
+                  <li><a href="https://yourei.jp/?hl=ja">用例.jp</a></li>
+                  <li><a href="https://www.douwa-douyou.jp/index.shtml">日本童话</a></li>
+              </ul>
+          </li>
+        </ul>/* 导航栏 */
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex 1 flex column"></div>
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baise yinying"> </div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="neirong flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shujuqu">
+            <!-- 数据块 -->
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinying">
+            </div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinying"
+            ></div>
+            <div
+              style="height: 100px"
+              class="shuju flex1 baise mgr8 yinying"
+            ></div>
+            <div style="height: 100px" class="shuju flex1 baise yinying"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column mgr8 mgt8">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="baise mgt8 yinying"
+            <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <style>
+                /* 加上 -webkit- 注意兼容 */
+                p {
+                  background: -webkit-linear-gradient(135deg,
+                           #0eaf6d,
+                           #ff6ac6 25%,
+                           #147b96 50%,
+                           #e6d205 55%,
+                           #2cc4e0 60%,
+                           #8b2ce0 80%,
+                           #ff6384 95%,
+                           #08dfb4);
+                   /* 文字颜色填充设置为透明 */
+                  -webkit-text-fill-color: transparent;
+                   /* 背景裁剪，即让文字使用背景色 */
+                   -webkit-background-clip: text;
+                   /* 背景图放大一下，看着柔和一些 */
+                   -webkit-background-size: 200% 100%;
+                   /* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+                   -webkit-animation: flowCss 12s infinite linear;
+                 }
+
+                 @-webkit-keyframes flowCss {
+                     0% {
+                         /* 移动背景位置 */
+                         background-position: 0 0;
+                     }
+         
+                     100% {
+                         background-position: -400% 0;
+                     }
+                 }
+         
+                 h1:hover {
+                     -webkit-animation: flowCss 4s infinite linear;
+                 }
+              </style>
+            </head>
+            
+            <body>
+                <p>你好，朋友。 我是zero。</p>
+                <p>欢迎来到我的个人网站。</p>
+                <p>这是因为我第一次做网站，如有不成熟的地方，请斧正。</p>
+              <!-- 思路就是 文字颜色填充为透明、背景裁剪让文字使用背景色、然后设置一个渐变背景色
+              再放大一下背景，最后通过动画移动背景位置，于是效果就出来了 -->
+            </body>
+            <embed src="music/We Don't Talk Anymore.mp3" autostart="true" loop="true" hidden="true"></embed>
+            
+            </html>
+            </div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="youqu flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="baise mg8 yinying"></div>
+          <!-- 音乐控制区 -->
+          <audio src="./背景音乐.mp3" autoplay></audio>
+          <audio src="背景音乐.mp3" id="dd" autoplay="autoplay" controls="controls" loop="loop"></audio>
+          <button onclick="dt()">停止播放</button>
+          <button onclick="st()">开始播放</button>
+          <button onclick="rs()">重置播放</button>
+            
+          <script type="text/javascript">
+            function dt(){
+              var dd = document.getElementById("dd")
+              dd.pause()
+            }
+            function st(){
+              var dd = document.getElementById("dd")
+              dd.play()
+            }
+            function rs(){
+              var dd = document.getElementById("dd")
+              dd.load()
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
